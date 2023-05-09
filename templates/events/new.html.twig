@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create
+{% endblock %}
+
+{% block body %}
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<div class="d-flex mt-2 gap-2">
+		<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+		<a class="btn btn-dark" href="{{ path('app_events_index') }}">back to list</a>
+	</div>
+	{{ form_end(form) }}
+{% endblock %}
